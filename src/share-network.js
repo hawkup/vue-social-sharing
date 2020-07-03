@@ -222,7 +222,9 @@ export default {
         ',screenY=' + this.popup.top
       )
 
-      this.popup.window.focus()
+      if (this.popup.window) {
+        this.popup.window.focus()
+      }
 
       // Create an interval to detect popup closing event
       this.popup.interval = setInterval(() => {
